@@ -1,6 +1,6 @@
 import { Car } from '../Car';
 import { Colors } from '../../core/Enums/Colors';
-export class FamilyCar extends Car {
+class FamilyCar extends Car {
 
     protected static standardMaxSpeed: number = 200;
     protected static standardAceleration: number = 1; //k / h * h
