@@ -1,10 +1,9 @@
 {
     "compilerOptions": {
-        "target": "ES6"
+        "outDir": "./dist/out-tsc",
+        "target": "es6"
     },
     "files": [
-        "",
-        "",
-        "",
+        "src/app.ts"
     ]
 }
