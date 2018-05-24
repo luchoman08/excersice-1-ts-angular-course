@@ -3,6 +3,23 @@ import { CarWarnings } from "../core/Enums/CarWarnings";
 
 export abstract class Car {
     private _aceleration: number; // in k / h * h
+
+    /**
+     * Getter model_name
+     * @return {string}
+     */
+	public get model_name(): string {
+		return this._model_name;
+	}
+
+    /**
+     * Setter model_name
+     * @param {string} value
+     */
+	public set model_name(value: string) {
+		this._model_name = value;
+	}
+    private _model_name: string;
     private _capacity: number;
     private _numberOfDoors: number;
     private _maxSpeed: number;
@@ -14,9 +31,11 @@ export abstract class Car {
 
 
     private _isConvertible: boolean;
+    protected static standardColor: Colors = Colors.Blue; 
     protected static standardMaxSpeed: number = 80;
     protected static standardAceleration: number = 1; //k / h * h
     protected static standardNumberOfDoors: number = 4;
+    protected static standarModelName: string = '';
     protected static standardCapacity: number = 4;
     protected static standardIsConvertible: boolean = false; 
     constructor() {
@@ -24,16 +43,14 @@ export abstract class Car {
         this._currentSpeed = 0;
         this._sealtBeltIsOn = false;
         this._isTurnedOn = false;
-    }
-    make(color: Colors) {
-        this._color = color;
+        this._color? null: Car.standardColor;
         this._aceleration ? null : this._aceleration = Car.standardAceleration;
         this._numberOfDoors ? null : this._numberOfDoors = Car.standardNumberOfDoors;
         this._maxSpeed ? null : this._maxSpeed = Car.standardMaxSpeed;
         this._capacity ? null : this._capacity = Car.standardCapacity;
         this._isConvertible ? null: this._isConvertible = Car.standardIsConvertible;
     }
-
+        
     public _acelerationacelerate() {
         this._currentSpeed = this._currentSpeed + this._aceleration;
     }

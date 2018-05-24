@@ -1,13 +1,15 @@
 import { SportsCar } from '../SportsCar';
 import { Colors } from '../../../core/Enums/Colors';
-class Convertible extends SportsCar {
+export class Convertible extends SportsCar {
 
-    protected static standardMaxSpeed: number = 350;
-    protected static standardAceleration: number = 0.2; //k / h * h
-    protected static standardNumberOfDoors: number = 4;
-    protected static standardCapacity: number = 4;
-    constructor(
-    ) {  super(); 
+    public static standardMaxSpeed: number = 350;
+    public static standardAceleration: number = 0.2; //k / h * h
+    public static standardNumberOfDoors: number = 4;
+    public static standardCapacity: number = 4;
+    public static standardColor: Colors = Colors.Blue;
+    protected static standarModelName: string = 'Convertible';
+    constructor() {
+        super(); 
         this.isConvertible = true;
     }
 }
