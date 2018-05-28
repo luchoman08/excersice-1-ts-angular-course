@@ -1,7 +1,7 @@
 # excersice-1-ts-angular-course
 Typescript models example
 
-# How run
+# How to run
 Into directory, execute npm run start, and next go to the browser and open http://localhost:8080
 
 # Description
