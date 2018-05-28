@@ -1,4 +1,5 @@
 import { OptionsCar } from '@app/CarFactory';
 
-export interface OptionsMuscle extends OptionsCar {
+export interface OptionsRace extends OptionsCar {
+    convertible?: boolean;
 }
