@@ -6,7 +6,8 @@ export class FamilyCar extends Car {
     protected static standardAceleration: number = 1; //k / h * h
     protected static standardNumberOfDoors: number = 4;
     protected static standardCapacity: number = 7;
-    constructor(
-    ) {  super(); 
-    }
+    constructor(modelName: string, color: Colors, aceleration: number, numberOfDoors: number,
+        maxSpeed: number, capacity: number, isConvertible: boolean) {
+            super(modelName, color, aceleration, numberOfDoors, maxSpeed, capacity, isConvertible);
+        }
 }

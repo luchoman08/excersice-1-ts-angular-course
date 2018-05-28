@@ -4,15 +4,20 @@
         "target": "es5",
         "sourceMap": true,
         "module": "commonjs",
-        "jsx": "react"
+        "jsx": "react",
+        "baseUrl": "src",
+        "paths": {
+          "@app/*": ["app/*"]
+        }
     },
-    "files": [
-        "src/app/app.ts"
-    ],
+
     "lib": [
         "es2015"
       ],
     "include": [
         "src"
      ],
+     "exclude": [
+        "node_modules"
+      ]
 }

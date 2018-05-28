@@ -12,6 +12,5 @@ const Hello: React.SFC<{ compiler: string, framework: string }> = (props) => {
 }
 app.init();
 ReactDOM.render(
-  <Hello compiler="TypeScript" framework="React" />,
   document.getElementById("root")
 );

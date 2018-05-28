@@ -1,5 +1,5 @@
-import { Convertible } from '../Car';
-import { Colors } from '../core';
+import { Convertible } from '../Car/SportsCar/Convertible/Convertible';
+import { Colors } from '../core/Enums/Colors';
 import { OptionsConvertible } from '@app/CarFactory/OptionsConvertible';
 
 export class ConvertibleFactory {
@@ -12,7 +12,7 @@ export class ConvertibleFactory {
     constructor() {}
     public make( options: OptionsConvertible)
         : Convertible {
-            const convertible: Convertible = new Convertible(
+            const convertible: Convertible = new Convertible(     
                 options.model_name? options.model_name: ConvertibleFactory.standarModelName,
                 options.color? options.color: ConvertibleFactory.standardColor,
                 options.aceleration?  options.aceleration: ConvertibleFactory.standardAceleration,

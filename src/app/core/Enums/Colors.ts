@@ -1,6 +1,6 @@
 export enum Colors {
-   Purple = '#0000D6',
+   LigthGreen = 'rgb(122, 214, 0)',
    Green = '008B00',
    Blue = '#0000E4',
-   Niga = "#000000"
+   Black = "#000000"
 }

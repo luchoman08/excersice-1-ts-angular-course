@@ -1,7 +1,7 @@
 import { Colors } from "../core/Enums/Colors";
 import { CarWarnings } from "../core/Enums/CarWarnings";
 
-export abstract class Car {
+export abstract class Car{
     private _aceleration: number; // in k / h * h
 
     /**
@@ -28,30 +28,33 @@ export abstract class Car {
     private _isTurnedOn: boolean;
     private _sealtBeltIsOn: boolean;
     private _color: Colors;
-
-
     private _isConvertible: boolean;
     protected static standardColor: Colors = Colors.Blue; 
     protected static standardMaxSpeed: number = 80;
     protected static standardAceleration: number = 1; //k / h * h
     protected static standardNumberOfDoors: number = 4;
+    protected static standardCurrentGasoline = 0;
+    protected static standardCurrentSpeed = 0;
     protected static standarModelName: string = '';
     protected static standardCapacity: number = 4;
+    protected static standardModelName: string =  "Standard Car";
     protected static standardIsConvertible: boolean = false; 
-    constructor() {
-        this._currentGasoline = 0;
-        this._currentSpeed = 0;
-        this._sealtBeltIsOn = false;
-        this._isTurnedOn = false;
-        this._color? null: Car.standardColor;
-        this._aceleration ? null : this._aceleration = Car.standardAceleration;
-        this._numberOfDoors ? null : this._numberOfDoors = Car.standardNumberOfDoors;
-        this._maxSpeed ? null : this._maxSpeed = Car.standardMaxSpeed;
-        this._capacity ? null : this._capacity = Car.standardCapacity;
-        this._isConvertible ? null: this._isConvertible = Car.standardIsConvertible;
+    constructor(modelName: string, color: Colors, aceleration: number, numberOfDoors: number,
+    maxSpeed: number, capacity: number, isConvertible: boolean) {
+        this.model_name = modelName;
+        this.currentGasoline = Car.standardCurrentGasoline;
+        this.currentSpeed = Car.standardCurrentSpeed;
+        this.sealtBeltIsOn = false;
+        this.isTurnedOn = false;
+        this.color = color? color: Car.standardColor;
+        this.aceleration = aceleration ? aceleration : Car.standardAceleration;
+        this.numberOfDoors = numberOfDoors ? numberOfDoors :  Car.standardNumberOfDoors;
+        this.maxSpeed = maxSpeed ? maxSpeed :  Car.standardMaxSpeed;
+        this.capacity = capacity?  capacity : Car.standardCapacity;
+        this.isConvertible = isConvertible? isConvertible: Car.standardIsConvertible;
     }
         
-    public _acelerationacelerate() {
+    public acelerationacelerate() {
         this._currentSpeed = this._currentSpeed + this._aceleration;
     }
     public brake() {
