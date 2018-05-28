@@ -1,3 +1,4 @@
+import { Colors } from '@app/core';
 
 export function syntaxHighlight(json) {
     json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -18,6 +19,11 @@ export function syntaxHighlight(json) {
     });
 }
 
-export function output(inp) {
-    document.body.appendChild(document.createElement('pre')).innerHTML = inp;
+export function output(inp, color: Colors) {
+    var obj = document.createElement('pre');
+    obj.style.borderColor =  color;
+    obj.style.borderWidth = "5px";
+    obj.style.borderStyle = "solid";
+    obj.style.borderRadius = "5px";
+    document.body.appendChild(obj).innerHTML = inp;
 }
