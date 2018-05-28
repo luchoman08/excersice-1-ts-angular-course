@@ -2,7 +2,7 @@
 Typescript models example
 
 # How to run
-Into directory, execute npm run start, and next go to the browser and open http://localhost:8080
+Into directory *excersice-1-ts-angular-course*, execute first **npm install** and next **npm run start**, finally go to the browser and open http://localhost:8080
 
 # Description
 The present repository is a basic example of how to use models, getters, setters and private elements in classes, also have all configuraitons
