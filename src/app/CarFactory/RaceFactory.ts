@@ -8,6 +8,8 @@ export class RaceFactory {
     public static standardNumberOfDoors: number = 4;
     public static standardCapacity: number = 4;
     public static standardColor: Colors = Colors.Blue;
+    public static standardHasSpoiler: boolean = false;
+    public static standardIsConvertible: boolean = false;
     protected static standarModelName: string = 'RaceFactory';
     constructor() {}
     public make( options: OptionsRace)
@@ -19,7 +21,8 @@ export class RaceFactory {
                 options.numberOfDoors? options.numberOfDoors: RaceFactory.standardNumberOfDoors,
                 options.maxSpeed? options.maxSpeed: RaceFactory.standardNumberOfDoors,
                 options.capacity? options.capacity: RaceFactory.standardCapacity,
-                true
+                options.hasSpoiler? options.hasSpoiler: RaceFactory.standardHasSpoiler,
+                options.convertible? options.convertible: RaceFactory.standardIsConvertible
                 );
             return raceCar;
     }

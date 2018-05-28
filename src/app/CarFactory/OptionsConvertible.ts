@@ -1,4 +1,5 @@
-import { OptionsCar } from '@app/CarFactory';
+import { OptionsSportCar } from '@app/CarFactory/OptionsSportCar';
 
-export interface OptionsConvertible extends OptionsCar {
+export interface OptionsConvertible extends OptionsSportCar {
+    
 }

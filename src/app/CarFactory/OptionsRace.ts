@@ -1,5 +1,5 @@
-import { OptionsCar } from '@app/CarFactory';
+import { OptionsSportCar } from '@app/CarFactory/OptionsSportCar';
 
-export interface OptionsRace extends OptionsCar {
+export interface OptionsRace extends OptionsSportCar {
     convertible?: boolean;
 }
