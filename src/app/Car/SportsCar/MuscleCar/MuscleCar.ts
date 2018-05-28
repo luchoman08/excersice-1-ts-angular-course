@@ -6,7 +6,7 @@ export class MuscleCar extends SportsCar {
     protected static standardNumberOfDoors: number = 2;
     protected static standardCapacity: number = 4;
     constructor(modelName: string, color: Colors, aceleration: number, numberOfDoors: number,
-        maxSpeed: number, capacity: number, isConvertible: boolean) {
-            super(modelName, color, aceleration, numberOfDoors, maxSpeed, capacity, isConvertible);
+        maxSpeed: number, capacity: number, isConvertible: boolean, hasSpoiler: boolean) {
+            super(modelName, color, aceleration, numberOfDoors, maxSpeed, capacity, isConvertible, hasSpoiler);
         }
 }
