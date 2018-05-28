@@ -23,15 +23,19 @@ const muscle: MuscleCar = muscleFactory.make( {
 })
 const raceCar: RaceCar = raceFactory.make( {
     model_name: 'Jaguar XJS',
-    color: Colors.Black,
+    color: Colors.Orange,
     aceleration: 0.5, 
     convertible: false,
     maxSpeed: 420,
     
 })
-syntaxHighlight.output(syntaxHighlight.syntaxHighlight(JSON.stringify(convertible, undefined, 4)));
-syntaxHighlight.output(syntaxHighlight.syntaxHighlight(JSON.stringify(muscle, undefined, 4)));
-syntaxHighlight.output(syntaxHighlight.syntaxHighlight(JSON.stringify(raceCar, undefined, 4)));
+syntaxHighlight.output(
+    syntaxHighlight.syntaxHighlight(JSON.stringify(convertible, undefined, 4)),
+    convertible.color);
+syntaxHighlight.output(syntaxHighlight.syntaxHighlight(JSON.stringify(muscle, undefined, 4)),
+muscle.color);
+syntaxHighlight.output(syntaxHighlight.syntaxHighlight(JSON.stringify(raceCar, undefined, 4)),
+raceCar.color);
 
 }
 
