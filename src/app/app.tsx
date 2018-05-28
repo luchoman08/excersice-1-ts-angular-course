@@ -11,6 +11,6 @@ const Hello: React.SFC<{ compiler: string, framework: string }> = (props) => {
   );
 }
 app.init();
-ReactDOM.render(
-  document.getElementById("root")
+ReactDOM.render( null,
+  document.querySelector('#root')
 );
